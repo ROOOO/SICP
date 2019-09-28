@@ -17,4 +17,7 @@
 (sum-of-squares-of-two-larger-of-three 2 3 1)
 (sum-of-squares-of-two-larger-of-three 3 1 2)
 (sum-of-squares-of-two-larger-of-three 3 2 1)
+(sum-of-squares-of-two-larger-of-three 1 1 1)
+(sum-of-squares-of-two-larger-of-three 3 2 2)
+(sum-of-squares-of-two-larger-of-three 3 3 2)
 
