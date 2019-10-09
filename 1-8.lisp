@@ -1,0 +1,22 @@
+(define (cube-root x)
+  (cube-root-iter 1.0 x))
+(define (cube-root-iter y x)
+  (if (good-enough? (improve y x) y)
+    (improve y x)
+    (cube-root-iter (improve y x)
+		    x)))
+(define (improve y x)
+  (/ (+ (/ x 
+	   (square y)) 
+	(* 2 y))
+     3))
+(define (square x)
+  (* x x))
+(define (good-enough? y x)
+  (> 0.001 (abs (- y x))))
+
+(cube-root 8)
+(cube-root 27)
+(cube-root 0.000000009)
+(cube-root 90000000000000000000000000000000000000000000000000000000000000000)
+
