@@ -1,0 +1,26 @@
+(define (pascals-triangle row col)
+  (cond ((= row 0) 1)
+        ((= col 0) 1)
+        ((= row col) 1)
+        (else (+ (pascals-triangle (- row 1) (- col 1))
+                 (pascals-triangle (- row 1) col)))))
+
+(pascals-triangle 4 0)
+(pascals-triangle 4 1)
+(pascals-triangle 4 2)
+(pascals-triangle 4 3)
+(pascals-triangle 4 4)
+
+(load "factorial.lisp")
+(define (pascals-triangle-iter row col)
+  (/ (factorial row)
+     (* (factorial col)
+        (factorial (- row col)))))
+
+(pascals-triangle-iter 4 0)
+(pascals-triangle-iter 4 1)
+(pascals-triangle-iter 4 2)
+(pascals-triangle-iter 4 3)
+(pascals-triangle-iter 4 4)
+(pascals-triangle-iter 100 50)
+
